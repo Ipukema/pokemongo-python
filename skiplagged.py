@@ -87,6 +87,7 @@ class Skiplagged():
         while 1:
             try:
                 if is_skiplagged_api:
+                    time.sleep(1)
                     r = requests_session.post(endpoint, data, verify=False)
                     return json.loads(r.content)
                 else:
